@@ -1,15 +1,57 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 
 <head>
-    <title>pataton</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Arrays y JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+    </style>
 </head>
-<body>
-    <h3>
-        marica callate
-    </h3>
 
+<body>
+
+
+
+    <script>
+        // Crear un array de números aleatorios
+        let numeros = [];
+
+
+        for (let i = 0; i < 20; i++) {
+            numeros.push(Math.floor(Math.random() * 200) + 1);
+        }
+
+
+
+        // Filtrar números pares
+        let numerosPares = [];
+        let numerosImpares = [];
+        for (let maca = 0; maca < numeros.length; maca++) {
+            if (numeros[maca] % 2 === 0) {
+                numerosPares.push(numeros[maca]);
+            }
+        }
+        for (let j = 0; j < numeros.length; j++) {
+
+            if (numeros[j] % 2 != 0) {
+                numerosImpares.push(numeros[j])
+
+            }
+        }
+        document.write("todos los numeros:" + numeros + "<br>")
+        document.write("todos los numeros pares:" + numerosPares + "<br>")
+        document.write("todos los numeros impares:" + numerosImpares)
+   
+
+
+    </script>
 
 </body>
-</form>
 
 </html>
