@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+</head>
+
+<body>
+
+    <form id="formularioIMC">
+        Peso (kg):
+        <input type="number" id="peso" required>
+
+        Altura (m):
+        <input type="number" id="altura" step="0.01" required>
+
+        <input type="submit" value="Calcular IMC">
+    </form>
+    <div id="resultado"></div>
+    <script>
+        document.getElementById('formularioIMC').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+
+            var peso = parseFloat(document.getElementById('peso').value);
+            var altura = parseFloat(document.getElementById('altura').value);
+
+            var imc = peso / (altura * altura);
+
+            var res = document.getElementById("resultado");
+            if (imc.toFixed(2) < 19) { res.innerHTML = "Estás por debajo de tu peso ideal" }
+            else if (imc.toFixed(2) >= 19 && imc.toFixed(2) < 24.5) { res.innerHTML = "Estás en tu peso ideal" }
+            else if (imc.toFixed(2) >= 24.5 && imc.toFixed(2) < 29.9) { res.innerHTML = "Estás por encima de tu peso ideal" }
+            else if (imc.toFixed(2) >= 30) { res.innerHTML = "Obesidad" }
+        });
+    </script>
+
+</body>
+
+</html>
