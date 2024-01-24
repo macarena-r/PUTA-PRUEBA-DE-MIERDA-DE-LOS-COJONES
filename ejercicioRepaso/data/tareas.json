@@ -1,0 +1,17 @@
+{
+    "tareas": [
+        {
+            "id": 1,
+            "nombre": "Hacer la compra"
+        },
+        {
+            "id": 2,
+            "nombre": "Estudiar JavaScript"
+        },
+        {
+            "id": 3,
+            "nombre": "Salir a correr"
+        }
+    ],
+    "ultimoId": 3
+}
